@@ -1,0 +1,21 @@
+%%-*- mode: erlang -*-
+{application, tap,
+ [
+  {description, "Erlang VM reporting for Riemann"},
+  {vsn, "0.0.1"},
+  {modules, []},
+
+  {registered, [zeta]},
+  {applications, [
+                  kernel,
+                  stdlib,
+		  lager,
+		  zeta
+                 ]},
+
+  {mod, {tap, []}},
+  {env, [
+	 {timeout, 2000},
+	 {diagnostics, [idle_time, proc_count]}
+	]}
+ ]}.
