@@ -44,9 +44,10 @@ loop(St = #st{parent = Parent, debug = Deb, timeout = Timeout}) ->
 
 -spec
 beat(#st{}) -> no_return().
-beat(St = #st{function = Fn, diagnostic = Diagnostic}) -> 
+beat(St = #st{function = Fn, diagnostic = Diagnostic, timeout = Timeout}) -> 
     zeta:svh(Diagnostic, Fn(), ok, [{tags, [erl_vm]},
-				    {t, timestamp()}]),
+				    {t, timestamp()},
+				    {ttl, 1.1*(Timeout/1000)}]),
     loop(St).
 
 dbg(Device, Event, Extra) ->

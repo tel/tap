@@ -15,7 +15,7 @@
 
   {mod, {tap, []}},
   {env, [
-	 {timeout, 2000},
-	 {diagnostics, [idle_time, proc_count]}
+	 {timeout, 1000},
+	 {diagnostics, [proc_count]}
 	]}
  ]}.
