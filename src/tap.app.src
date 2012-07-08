@@ -5,7 +5,7 @@
   {vsn, git},
   {modules, []},
 
-  {registered, [zeta]},
+  {registered, []},
   {applications, [
                   kernel,
                   stdlib,
