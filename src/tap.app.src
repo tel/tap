@@ -2,14 +2,13 @@
 {application, tap,
  [
   {description, "Erlang VM reporting for Riemann"},
-  {vsn, "0.0.1"},
+  {vsn, git},
   {modules, []},
 
   {registered, [zeta]},
   {applications, [
                   kernel,
                   stdlib,
-		  lager,
 		  zeta
                  ]},
 
